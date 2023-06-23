@@ -35,23 +35,36 @@ The `Dijkstra` function implements the Dijkstra algorithm to find the shortest p
 
 ### `random_search`
 
-The `random_search` function implements a random search algorithm to find a path between the starting cell and the end cell in a 2D matrix. It takes the matrix, the endpoint coordinates (`end_pt`), and the starting row and column indices as input. The algorithm randomly explores neighboring cells until the endpoint is reached or the number of iterations exceeds a threshold.
-
+The `random_search` function implements a random search algorithm to find a path between the starting cell and the end cell in a 2D matrix. It takes the matrix, the endpoint coordinates (`end_pt`), and the starting row and column indices as input. The algorithm randomly explores neighboring cells until the endpoint is reached or the number of iterations exceeds a threshold. It returns the number of iterations and the path if the endpoint is reached, otherwise, it returns `None`.
 NOTE : For Random Search Algorithm, the grid is often not visible to index error and given the high number of iterations, the output is very unpredictable.
 
-Performance Plot:
+## Performance Evaluation
 
-Plotting 4 pathfinding algorithms (DFS, BFS, Dijkstra, and random search) on a grid with increasing obstacle coverage. The obstacle coverage is calculated as the percentage of the grid that is blocked by obstacles. The algorithms are run for coverage values ranging from 0 to 75 with a step size of 25. The number of iterations each algorithm takes to reach the goal is recorded and plotted against the coverage value.
-![Performance plot](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/b647e5ec-43fd-4127-85f8-61f4cd983f88)
-
-Planner Path figures:
-Three figures depicting the resulting path from each of the planners (DFS, BFS, Dijkstra, and random search) on different Coverage rate of 5%, 10% and 15% respectively.
-Blue – BFS
-Red – DFS
-Green - Dijikstra
+The performance of the search algorithms (BFS, DFS, Dijkstra) can be evaluated using the provided `performance_plot` function. This function generates a performance plot by running the algorithms on a grid with increasing obstacle coverage. The obstacle coverage is calculated as the percentage of the grid that is blocked by obstacles.  The number of iterations each algorithm takes to reach the goal is recorded and plotted against the coverage value.
+![Performance plot](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/2c66d12e-0ff3-4e77-a661-2dfe2b2f2236)
 
 
 
- 
- 
+## Planner Path Figures
 
+The `planner_path_figures` function generates figures depicting the resulting paths from each planner (BFS, DFS, Dijkstra) on grids with different obstacle coverage rates.The obstacle coverage is calculated as the percentage of the grid that is blocked by obstacles.The number of iterations each algorithm takes to reach the goal is recorded and plotted against the coverage value. The paths are color-coded as follows:
+
+- Blue: BFS
+- Red: DFS
+- Green: Dijkstra
+
+![Planner path at 5%](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/a7c786e9-4fa9-48c6-a4c0-8fbb57cfc930)
+
+Planner path at 5% occupancy grid
+
+![Planner path at 10%](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/6f9fb31e-d22b-48c3-93fa-812802089833)
+
+Planner path at 10% occupancy grid
+
+![Planner path at 15%](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/5c308c16-6c6f-4de3-a4a7-cf5f57d3a4ca)
+
+Planner path at 10% occupancy grid
+
+These figures provide visual representations of the paths found by each algorithm under varying obstacle conditions.
+
+Please refer to the code and function documentation for more details on the implementation and usage of the search algorithms.
