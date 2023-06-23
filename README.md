@@ -8,12 +8,18 @@ This repository contains Python implementations of Breadth First Search (BFS), D
 
 The `obstacle_field` function generates a 2D matrix with dimensions of 128x128 and randomly places obstacles on the grid based on a specified density. It uses various tetris shape functions (`shape_1`, `shape_2`, `shape_3`, and `shape_4`) to place different shapes of size 4 on the matrix. The function returns the 2D matrix with the placed obstacles.
 ![Obstacle Field-1](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/0663b894-075b-4344-aa32-016ec5418d1a)
+
+
 Obstacle field with 25% occupancy density
 
 ![50%](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/94370ec2-9ac1-4b8b-a44d-fe49790758b9)
+
+
 Obstacle field with 50% occupancy density
 
 ![70%](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/41d70865-4f0f-4c1d-a837-eaef8d1d9900)
+
+
 Obstacle field with 75% occupancy density
 
 ### `check_valid`
