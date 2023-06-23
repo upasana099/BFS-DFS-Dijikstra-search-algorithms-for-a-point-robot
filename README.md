@@ -1,7 +1,9 @@
 # BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot
 The point robot starts in the Northwest corner of the world and travels to the Southeast corner. Stationary obstacles are placed randomly according to a preset density, which the robot must avoid.
 
-Helper Functions:
+#Helper Functions:**
+
+
 def obstacle_field
 The function obstacle_field generates a 2D matrix with dimensions of 128x128 and sets all its elements to 1. It then calculates the number of shapes required to be placed on the matrix based on the coverage (coverage_list) input.
 It then uses the shape_1, shape_2, shape_3 and shape_4 functions to place different shapes of size 4 on the matrix. The shapes are placed at random x and y coordinates and the number of shapes placed is equal to the number of shapes required.Finally, the function returns the 2D matrix with the placed shapes.
@@ -16,10 +18,11 @@ Search Traversal Functions:
 def BFS
 Breadth First Search (BFS) algorithm tries to find the shortest path between a starting cell and an end cell in a 2D matrix (my_field). The function takes the 2D matrix, the end point end_pt, and the starting row and column indices row and col as input.
 The algorithm starts by initializing the queue q with the starting cell and marking it as visited. It then pops cells from the front of the queue, checks if the end cell is reached, and appends the adjacent cells (that are within the boundaries of the matrix and not already visited) to the end of the queue. The check_valid function checks if a cell is valid, which is defined as being within the boundaries of the matrix and not visited yet. The algorithm continues until the queue is empty, at which point the function returns the number of cells visited (n) and the path.
+
 ![BFS](https://github.com/upasana099/BFS-DFS-Dijikstra-search-algorithms-for-a-point-robot/assets/89516193/698bd392-2b15-48fb-93ff-fdb82d41d9b5)
 
  
-def DFS
+**def DFS**
 Depth first search (DFS) algorithm in Python. The function takes a 2D matrix my_field, the endpoint end_pt represented as a list [row, col], the starting row row and column col. The function uses a list q as a queue to store cells to be visited, a 2D list visited to store the cells that have already been visited, and two lists Row and Col to store the row and column indices of the adjacents cells.
 The function starts by marking the starting cell as visited and adding it to the queue. It then enters a loop, where it pops a cell from the queue, checks if it's the endpoint, and if it's not, it adds its unvisited adjacent cells to the queue. The loop continues until the queue is empty or the endpoint is found. If the endpoint is found, the function returns a tuple of the number of cells visited n and the path to the endpoint represented as a list of coordinates. If the endpoint is not found, the function returns n and an empty list.
 
